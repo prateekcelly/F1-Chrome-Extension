@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>New Tab</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="container__top">
+        <div class="dateContainer">
+          <div class="date" id="DateDisplay" onload="showDate()"></div>
+        </div>
+        <div class="weatherContainer">
+          <div class="currentWeatherInfo">
+            <img class="currentWeatherIcon" id="currentWeatherIcon"></img>
+            <div class="currentWeather" id="currentWeather"></div>
+            <div class="degreeIcon" id="degreeIcon"></div>
+          </div>
+          <div class="locationInfo" id="locationInfo"></div>
+        </div>
+      </div>
+      <div class="timeContainer">
+        <div class="time" id="ClockDisplay"></div>
+      </div>
+      <div class="searchBarContainer">
+        <form
+          action="https://www.google.com/2search"
+          method="get"
+          class="searchForm"
+          name="searchform"
+        >
+          <i class="fa fa-search"></i>
+          <input
+            autocomplete="off"
+            class="searchBar"
+            name="q"
+            placeholder="Search Google or type a URL"
+            required="required"
+            type="text"
+          />
+          <input
+            type="submit"
+            style="position: absolute; left: -9999px; width: 1px; height: 1px;"
+            tabindex="-1"
+          />
+        </form>
+      </div>
+      <div class="container__bottom" onload="fetchNextRaceSchedule()">
+        <div class="settingTabContainer">
+          <div class="settingTab" id='settingTab'>
+            <div class="chromeTab" id="chromeTab">
+              <div class="fa fa-chrome"></div>
+              <div>Chrome Tab</div>
+            </div>
+            <div class="backgroundChangeTab" id="backgroundChangeTab">
+              <div class="fa fa-pencil-square"></div>
+              <div>Background</div>
+            </div>
+          </div>
+          <div>
+            <div class="fa fa-cog" id="settingIcon"></div>
+          </div>
+        </div>
+        <div class="nextRaceInfoContainer">
+          <div id="raceInfoLoader">
+            <div class="lds-dual-ring"></div>
+          </div>
+          <div id="raceInfoDisplay"></div>
+        </div>
+      </div>
+      <div class="nextPageArrowContainer">
+        <div class="fa fa-angle-double-down"></div>
+      </div>
+    </div>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="./src/main.css" />
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

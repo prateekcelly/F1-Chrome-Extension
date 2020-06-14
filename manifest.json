@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "DailyF1",
+  "description": "Get latest updates for your daily dose of F1 on your Google homepage",
+  "version": "1",
+  "author": "Prateek Celly",
+  "browser_action": {
+    "default_icon": "./assets/logo/logo.png",
+    "default_title": "New Tab"
+  },
+  "chrome_url_overrides": { "newtab": "newtab.html" },
+  "permissions": ["activeTab", "geolocation"]
+}

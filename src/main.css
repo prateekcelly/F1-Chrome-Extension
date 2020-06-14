@@ -1,0 +1,309 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  animation: fadein 2s 0s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "Formula1Bold";
+  src: URL("../assets/fonts/Formula1-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Formula1Black";
+  src: URL("../assets/fonts/Formula1-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Formula1Regular";
+  src: URL("../assets/fonts/Formula1-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Formula1Wide";
+  src: URL("../assets/fonts/Formula1-Wide.ttf") format("truetype");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+  transition: 1s ease 0s;
+  user-select: none;
+}
+
+.container__top {
+  flex: 0.6;
+  display: flex;
+  flex-direction: row;
+}
+
+.dateContainer {
+  flex: 1;
+  /* background-color: thistle; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+}
+
+.date {
+  font-size: 2.5vh;
+  font-family: Formula1Regular;
+  margin: 2vh;
+  margin-top: 3vh;
+}
+
+.weatherContainer {
+  flex: 1;
+  /* background-color: lightcoral; */
+  margin: 2vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  color: white;
+  font-family: Formula1Regular;
+}
+
+.currentWeatherInfo {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.currentWeather {
+  font-size: 2.5vh;
+  margin-top: 1.3vh;
+  margin-left: 1vh;
+  cursor: pointer;
+}
+
+.currentWeatherIcon {
+  font-size: 2.5vh;
+}
+
+.degreeIcon {
+  font-size: 2.5vh;
+  margin-top: 1.3vh;
+}
+
+.locationInfo {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeContainer {
+  flex: 2;
+  /* background-color: lightblue; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+}
+
+.time {
+  font-size: 14vh;
+  font-family: Formula1Regular;
+  letter-spacing: 1vh;
+  padding-bottom: 40px;
+  font-weight: bolder;
+}
+
+.searchBarContainer {
+  flex: 1;
+  /* background-color: maroon; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.searchForm {
+  width: 40em;
+  border-radius: 5em;
+  height: 3em;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  text-decoration: none;
+}
+
+.searchForm>i {
+  margin-left: 20px;
+}
+
+.searchBar {
+  margin: 0 10px;
+  width: 85%;
+  font-size: initial;
+  outline: none;
+  border: 0px solid black;
+}
+
+*:focus::placeholder {
+  transition: 0.1s ease 0s;
+  opacity: 0;
+}
+
+.container__bottom {
+  flex: 2;
+  /* background-color: mediumblue; */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  color: white;
+  font-size: 3vh;
+  font-family: Formula1Bold;
+  letter-spacing: 3px;
+  overflow: auto;
+}
+
+.nextRaceInfoContainer {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 2vw;
+}
+
+.raceInfoDisplay {
+  animation: fadein 2s 0s;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  right: 150px;
+  top: -50px
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.settingTabContainer {
+  flex: 1;
+  margin: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50%;
+}
+
+.settingTab {
+  box-sizing: border-box;
+  flex: 2;
+  margin: 1vh;
+  font-size: 1rem;
+  background-color: rgb(27, 27, 27, 0.8);
+  border-radius: 5px;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Formula1Regular;
+  clip-path: circle(0% at 0% 100%);
+  transition: all 0.3s ease 0s;
+}
+
+.chromeTab {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0rem;
+  box-sizing: border-box;
+  opacity: 0.6;
+}
+
+.chromeTab:hover {
+  opacity: 1;
+}
+
+.backgroundChangeTab {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0rem;
+  opacity: 0.6;
+}
+
+.backgroundChangeTab:hover {
+  opacity: 1;
+}
+
+
+.fa.fa-chrome {
+  margin: 0 0.3rem;
+}
+
+.fa.fa-pencil-square {
+  margin: 0 0.3rem
+}
+
+.fa.fa-cog {
+  font-size: 4vh;
+  flex: 1;
+  transition: 0.5s ease 0s;
+  opacity: 0.6;
+}
+
+.settingTabOpened {
+  transform: rotate(60deg) scale(1.3);
+}
+
+.nextPageArrowContainer {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: 2s ease;
+  font-size: 4vh;
+}
+
+.fa.fa-angle-double-down {
+  transform: scale(2.5, 1);
+  transition: 0.5s ease 0s;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.fa.fa-angle-double-down:hover {
+  transform: translateY(-2vh) scale(2.5, 1);
+}
