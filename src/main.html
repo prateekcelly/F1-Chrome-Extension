@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>New Tab</title>
+  </head>
+  <body>
+    <div id="page-1">
+      <div class="container">
+        <div class="container__top">
+          <div class="date-container">
+            <div
+              class="date-container__date"
+              id="DateDisplay"
+              onload="showDate()"
+            ></div>
+          </div>
+          <div class="weather-container">
+            <div class="currentWeatherInfo-container">
+              <img class="currentWeather-icon" id="currentWeatherIcon" />
+              <div class="currentWeather" id="currentWeather"></div>
+              <div class="degree-icon" id="degreeIcon"></div>
+            </div>
+            <div
+              class="weather-container__locationInfo"
+              id="locationInfo"
+            ></div>
+          </div>
+        </div>
+        <div class="container__time">
+          <div class="time-container" id="ClockDisplay"></div>
+        </div>
+        <div class="container__searchbar">
+          <form
+            action="https://www.google.com/search"
+            method="get"
+            class="searchForm"
+            name="searchform"
+          >
+            <i class="fa fa-search"></i>
+            <input
+              autocomplete="off"
+              class="searchBar"
+              name="q"
+              placeholder="Search Google or type a URL"
+              required="required"
+              type="text"
+            />
+            <input
+              type="submit"
+              style="
+                position: absolute;
+                left: -9999px;
+                width: 1px;
+                height: 1px;
+              "
+              tabindex="-1"
+            />
+          </form>
+        </div>
+        <div class="container__bottom" onload="fetchNextRaceSchedule()">
+          <div class="settingtab-container">
+            <div class="setting-tab" id="settingTab">
+              <div class="chrome-tab" id="chromeTab">
+                <div class="fa fa-chrome"></div>
+                <div>Chrome Tab</div>
+              </div>
+              <div class="backgroundchange-tab" id="backgroundChangeTab">
+                <div class="fa fa-pencil-square"></div>
+                <div>Background</div>
+              </div>
+            </div>
+            <div>
+              <div class="fa fa-cog" id="settingIcon"></div>
+            </div>
+          </div>
+          <div class="container__nextraceinfo">
+            <div id="raceInfoLoader">
+              <div class="lds-dual-ring"></div>
+            </div>
+            <div id="raceInfoDisplay"></div>
+          </div>
+        </div>
+        <div class="container__navigationdown">
+          <div class="fa fa-angle-double-down" id="nextPageButton"></div>
+        </div>
+      </div>
+    </div>
+    <div id="page-2">
+      <div class="container2">
+        <div class="container__navigationdown">
+          <div class="fa fa-angle-double-up" id="previousPageButton"></div>
+        </div>
+        <div class="dummyDiv"></div>
+      </div>
+    </div>
+    <link rel="manifest" href="../manifest.json" />
+    <script src="./dist/bundle.js"></script>
+  </body>
+</html>

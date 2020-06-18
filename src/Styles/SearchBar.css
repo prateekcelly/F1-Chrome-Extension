@@ -1,0 +1,28 @@
+.searchForm {
+    width: 40em;
+    border-radius: 5em;
+    height: 3em;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: gray;
+    text-decoration: none;
+}
+
+.searchForm>i {
+    margin-left: 20px;
+}
+
+.searchBar {
+    margin: 0 10px;
+    width: 85%;
+    font-size: initial;
+    outline: none;
+    border: 0px solid black;
+}
+
+*:focus::placeholder {
+    transition: 0.1s ease 0s;
+    opacity: 0;
+}

@@ -1,4 +1,4 @@
-import keys from "./config.js";
+import keys from "./Config.js";
 
 async function fetchBackground(day) {
   try {
@@ -39,6 +39,7 @@ export default async function setBackground(backgroundId) {
 
   let link = localStorage.getItem("backgroundImageLink");
   if (link === null) backgroundChanger();
+
   document.body.style.background =
     "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('" +
     link +

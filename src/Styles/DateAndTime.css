@@ -1,0 +1,23 @@
+.date-container {
+    flex: 1;
+    /* background-color: thistle; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+}
+
+.date-container__date {
+    font-size: 2.5vh;
+    font-family: Formula1Regular;
+    margin: 2vh;
+    margin-top: 3vh;
+}
+
+.time-container {
+    font-size: 14vh;
+    font-family: Formula1Regular;
+    letter-spacing: 1vh;
+    padding-bottom: 40px;
+    font-weight: bolder;
+}

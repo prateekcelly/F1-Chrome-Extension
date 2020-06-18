@@ -1,0 +1,13 @@
+.fa.fa-angle-double-down {
+    transform: scale(2.5, 1);
+    transition: 0.5s ease 0s;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    padding-top: 30px;
+}
+
+.fa.fa-angle-double-down:hover {
+    padding-bottom: 30px;
+    padding-top: 0px;
+}
