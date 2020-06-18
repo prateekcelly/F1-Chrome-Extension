@@ -1,3 +1,5 @@
+import fetchLatestF1News from "./FetchNews";
+
 //Onclick Previous Page
 let previousPageButton = document.getElementById("previousPageButton");
 previousPageButton.addEventListener("click", () => {
@@ -5,3 +7,5 @@ previousPageButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+fetchLatestF1News();
