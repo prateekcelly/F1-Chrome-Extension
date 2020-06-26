@@ -53,7 +53,7 @@ async function fetchNextRaceSchedule() {
       time = h + ":" + m + " " + session;
 
       raceInfo =
-        "Upnext" +
+        "Next Race" +
         "<br />" +
         "<br />" +
         raceName +

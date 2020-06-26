@@ -13,13 +13,13 @@ if (document.readyState == "loading") {
 
 function executeScripts() {
   //Stop Mouse Scroll
-  // window.addEventListener(
-  //   "wheel",
-  //   function (e) {
-  //     e.preventDefault();
-  //   },
-  //   { passive: false }
-  // );
+  window.addEventListener(
+    "wheel",
+    function (e) {
+      e.preventDefault();
+    },
+    { passive: false }
+  );
 
   //-----------Execute Functions: Start--------------//
   setBackground();
@@ -57,8 +57,16 @@ function executeScripts() {
     document.getElementById("page-2").scrollIntoView({
       behavior: "smooth",
     });
-    import(/* webpackChunkName: "secondpage" */ "./Components/SecondPage.js")
+    import(/* webpackChunkName: "secondpage" */ "./Components/SecondaryMain.js")
       .then(({ default: _ }) => {})
       .catch((error) => "An error occurred while loading the component");
+  });
+
+  //Onclick Previous Page
+  let previousPageButton = document.getElementById("previousPageButton");
+  previousPageButton.addEventListener("click", () => {
+    document.getElementById("page-1").scrollIntoView({
+      behavior: "smooth",
+    });
   });
 }

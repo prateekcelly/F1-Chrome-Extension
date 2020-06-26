@@ -40,11 +40,12 @@ export default async function setBackground(backgroundId) {
   let link = localStorage.getItem("backgroundImageLink");
   if (link === null) backgroundChanger();
 
-  document.body.style.background =
+  const page1 = document.getElementById("page-1");
+  page1.style.background =
     "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('" +
     link +
     "'), black";
 
-  document.body.style.backgroundSize = "cover";
-  document.body.style.backgroundRepeat = "no-repeat";
+  page1.style.backgroundSize = "cover";
+  page1.style.backgroundRepeat = "no-repeat";
 }
