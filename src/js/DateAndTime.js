@@ -1,4 +1,4 @@
-import "../Styles/DateAndTime.css";
+import "../css/DateAndTime.css";
 
 export function showTime() {
   let date = new Date();

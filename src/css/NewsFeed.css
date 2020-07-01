@@ -1,0 +1,133 @@
+.news-container {
+  height: calc(100% - 8rem);
+  color: #fff;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+}
+
+.news-container__title {
+  width: fit-content;
+  font-size: 16px;
+}
+
+.news-container__scroll-icon {
+  padding: 0 40px;
+  font-size: 2em;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.news-container__cards {
+  min-height: 100px;
+  max-height: 60vh;
+  margin-left: -3vw;
+  width: 500px;
+  overflow: auto;
+  animation: fadein 2s 0s;
+}
+
+.news-card {
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.news-card:hover {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.scroll--up {
+  border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+}
+
+.scroll--down {
+  border-top: 2px solid #fff;
+  margin-top: 10px;
+}
+
+.news-card > .news-card__link {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.news-card__column1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card__column2 {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  margin-left: 10px;
+}
+
+.news-card__image {
+  flex: 2;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 5%;
+  border: 2px solid black;
+}
+
+.news-card__date {
+  flex: 1;
+  padding-top: 10px;
+  font-size: 14px;
+  color: rgb(255, 255, 255, 0.8);
+  margin: 0 auto;
+}
+
+.news-card__title {
+  flex: 1;
+  margin: 0;
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+.news-card__info {
+  flex: 2;
+  margin: 0;
+  padding: 5px;
+  font-size: 14px;
+  color: rgb(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 1000px) {
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: unset;
+  }
+
+  .news-container__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+  }
+
+  .news-container__title > h3 {
+    margin: unset;
+  }
+
+  .news-container__scroll-icon {
+    position: static;
+  }
+
+  .news-container__cards {
+    position: static;
+    max-height: 25vh;
+    min-height: 20px;
+  }
+}

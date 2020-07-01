@@ -29,7 +29,7 @@ const config = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        loader: "file-loader?name=/assets/fonts/[name].[ext]",
+        loader: "file-loader?name=./src/Assets/fonts/[name].[ext]",
       },
       {
         test: /\.(png|svg|jpg|gif)$/,

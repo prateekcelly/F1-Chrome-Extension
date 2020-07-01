@@ -1,0 +1,23 @@
+.navigation-up {
+  position: relative;
+  top: 0;
+  height: 4rem;
+  width: inherit;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.fa.fa-angle-double-up {
+  transform: scale(2.5, 1);
+  transition: padding 0.5s ease 0s;
+  cursor: pointer;
+  font-weight: bold;
+  padding-bottom: 30px;
+  align-self: flex-start;
+}
+
+.fa.fa-angle-double-up:hover {
+  padding-bottom: 0px;
+  padding-top: 30px;
+}

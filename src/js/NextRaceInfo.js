@@ -1,4 +1,4 @@
-import "../Styles/NextRaceInfo.css";
+import "../css/NextRaceInfo.css";
 
 async function fetchNextRaceSchedule() {
   let raceInfoURL = "https://ergast.com/api/f1/current/next.json";

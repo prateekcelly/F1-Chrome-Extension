@@ -1,7 +1,7 @@
-import { showDate, showTime } from "./Components/DateAndTime.js";
-import setBackground from "./Components/MainBackground.js";
-import showWeather from "./Components/CurrentWeatherInfo.js";
-import showNextRaceSchedule from "./Components/NextRaceInfo.js";
+import { showDate, showTime } from "./js/DateAndTime.js";
+import setBackground from "./js/MainBackground.js";
+import showWeather from "./js/CurrentWeatherInfo.js";
+import showNextRaceSchedule from "./js/NextRaceInfo.js";
 import "./main.css";
 import "./assets/icons/logo.png";
 
@@ -12,15 +12,6 @@ if (document.readyState == "loading") {
 }
 
 function executeScripts() {
-  //Stop Mouse Scroll
-  window.addEventListener(
-    "wheel",
-    function (e) {
-      e.preventDefault();
-    },
-    { passive: false }
-  );
-
   //-----------Execute Functions: Start--------------//
   setBackground();
   showNextRaceSchedule();
@@ -57,7 +48,7 @@ function executeScripts() {
     document.getElementById("page-2").scrollIntoView({
       behavior: "smooth",
     });
-    import(/* webpackChunkName: "secondpage" */ "./Components/SecondaryMain.js")
+    import(/* webpackChunkName: "secondpage" */ "./js/SecondaryMain.js")
       .then(({ default: _ }) => {})
       .catch((error) => "An error occurred while loading the component");
   });
@@ -69,4 +60,38 @@ function executeScripts() {
       behavior: "smooth",
     });
   });
+
+  //Appending the current year on fixtures title
+  let tableTitle = document.querySelector(".fixtures-container__title > h3");
+  tableTitle.innerHTML += " " + new Date().getFullYear();
+
+  function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function () {
+      var context = this,
+        args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
+
+  function checkSecondPage() {
+    const loadPageAt = window.scrollY + window.innerHeight;
+    const pageOneHeight = document.querySelector("#page-1").offsetHeight;
+    const pageTwoHeight = document.querySelector("#page-2").offsetHeight;
+
+    if (loadPageAt > pageOneHeight + pageTwoHeight / 2) {
+      import(/* webpackChunkName: "secondpage" */ "./js/SecondaryMain.js")
+        .then(({ default: _ }) => {})
+        .catch((error) => "An error occurred while loading the component");
+    }
+  }
+
+  window.addEventListener("scroll", debounce(checkSecondPage));
 }

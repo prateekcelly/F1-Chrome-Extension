@@ -2,10 +2,10 @@ import cheerio from "cheerio";
 import fetch from "node-fetch";
 
 export default async function fetchLatestF1News() {
-  const url =
+  const newsURL =
     "https://cors-anywhere.herokuapp.com/" +
     "https://www.motorsport.com/f1/news/?p=1";
-  const data = await fetch(url);
+  const data = await fetch(newsURL);
   const $ = cheerio.load(await data.text());
   const newsDetails = $(".ms-item--art")
     .get()
@@ -33,7 +33,7 @@ export default async function fetchLatestF1News() {
       return {
         src: imgsrc,
         title: title,
-        link: link,
+        link: "https://motorsport.com" + link,
         info: info,
       };
     });

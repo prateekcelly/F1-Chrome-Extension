@@ -1,7 +1,7 @@
-@import url("./Styles/SearchBar.css");
-@import url("./Styles/SettingTab.css");
-@import url("./Styles/NavigationDown.css");
-@import url("./Styles/SecondaryMain.css");
+@import url("./css/SearchBar.css");
+@import url("./css/SettingTab.css");
+@import url("./css/NavigationDown.css");
+@import url("./css/SecondaryMain.css");
 
 *,
 *::before,
@@ -15,6 +15,8 @@ body {
   padding: 0;
   background-color: black;
   animation: fadein 2s 0s;
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes fadein {
@@ -29,28 +31,38 @@ body {
 
 @font-face {
   font-family: "Formula1Bold";
-  src: URL("./assets/fonts/Formula1-Bold.ttf") format("truetype");
+  src: URL("./Assets/fonts/Formula1-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Formula1Black";
-  src: URL("./assets/fonts/Formula1-Black.ttf") format("truetype");
+  src: URL("./Assets/fonts/Formula1-Black.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Formula1Regular";
-  src: URL("./assets/fonts/Formula1-Regular.ttf") format("truetype");
+  src: URL("./Assets/fonts/Formula1-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Formula1Wide";
-  src: URL("./assets/fonts/Formula1-Wide.ttf") format("truetype");
+  src: URL("./Assets/fonts/Formula1-Wide.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MontserratMedium";
+  src: URL("./Assets/fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MontserratMedium";
+  src: URL("./Assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
 }
 
 #page-1,
 #page-2 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -107,6 +119,6 @@ body {
   height: 2em;
   width: inherit;
   text-align: center;
-  font-size: 4vh;
+  font-size: 2rem;
   bottom: 0px;
 }

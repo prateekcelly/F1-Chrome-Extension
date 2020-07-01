@@ -1,5 +1,5 @@
 import keys from "./Config.js";
-import "../Styles/CurrentWeaterInfo.css";
+import "../css/CurrentWeaterInfo.css";
 
 let currentWeatherElement = document.getElementById("currentWeather");
 function fetchWeather() {

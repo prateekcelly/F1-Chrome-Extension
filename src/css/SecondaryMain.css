@@ -1,0 +1,37 @@
+@import url("./NavigationUp.css");
+@import url("./NewsFeed.css");
+@import url("./Fixtures.css");
+@import url("./NavigationBar.css");
+
+#page-2 {
+  background-color: rgb(255, 255, 255, 0.1);
+  font-family: MontserratMedium;
+}
+
+#loader {
+  position: relative;
+  padding: 0 40px;
+  width: fit-content;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+#loader > .lds-dual-ring {
+  right: unset;
+  top: unset;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
+
+#loader > .lds-dual-ring:after {
+  margin: unset;
+}
+
+@media only screen and (max-width: 1000px) {
+  #loader {
+    left: unset;
+    height: 100px;
+  }
+}

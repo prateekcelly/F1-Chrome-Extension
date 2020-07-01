@@ -31,7 +31,11 @@
           </div>
           <div class="weather-container">
             <div class="currentWeatherInfo-container">
-              <img class="currentWeather-icon" id="currentWeatherIcon" />
+              <img
+                class="currentWeather-icon"
+                id="currentWeatherIcon"
+                alt="icon"
+              />
               <div class="currentWeather" id="currentWeather"></div>
               <div class="degree-icon" id="degreeIcon"></div>
             </div>
@@ -101,11 +105,139 @@
       </div>
     </div>
     <div id="page-2">
-      <div class="secondary-background"></div>
+      <div class="fixtures-container">
+        <div class="fixtures-container__title">
+          <h3>F1 Schedule</h3>
+        </div>
+        <div class="fixtures-container__table">
+          <table style="border-collapse: collapse;">
+            <thead>
+              <tr>
+                <th>Round</th>
+                <th>Race</th>
+                <th>Circuit</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
       <div class="navigation-up">
         <div class="fa fa-angle-double-up" id="previousPageButton"></div>
       </div>
-      <div class="newsAndFixtures-container"></div>
+      <div class="news-container">
+        <div class="news-container__title">
+          <h3>Formula 1 News</h3>
+        </div>
+        <span class="material-icons news-container__scroll-icon scroll--up">
+          arrow_drop_up
+        </span>
+        <div id="loader">
+          <div class="lds-dual-ring"></div>
+        </div>
+        <div class="news-container__cards" style="display: none;">
+          <div class="news-card" id="newsCard1">
+            <a href="" class="news-card__link">
+              <div class="news-card__column1">
+                <img src="" alt="" class="news-card__image" />
+                <p class="news-card__date"></p>
+              </div>
+              <div class="news-card__column2">
+                <h4 class="news-card__title"></h4>
+                <p class="news-card__info"></p>
+              </div>
+            </a>
+          </div>
+          <div class="news-card" id="newsCard2">
+            <a href="" class="news-card__link">
+              <div class="news-card__column1">
+                <img src="" alt="" class="news-card__image" />
+                <p class="news-card__date"></p>
+              </div>
+              <div class="news-card__column2">
+                <h4 class="news-card__title"></h4>
+                <p class="news-card__info"></p>
+              </div>
+            </a>
+          </div>
+          <div class="news-card" id="newsCard3">
+            <a href="" class="news-card__link">
+              <div class="news-card__column1">
+                <img src="" alt="" class="news-card__image" />
+                <p class="news-card__date"></p>
+              </div>
+              <div class="news-card__column2">
+                <h4 class="news-card__title"></h4>
+                <p class="news-card__info"></p>
+              </div>
+            </a>
+          </div>
+          <div class="news-card" id="newsCard4">
+            <a href="" class="news-card__link">
+              <div class="news-card__column1">
+                <img src="" alt="" class="news-card__image" />
+                <p class="news-card__date"></p>
+              </div>
+              <div class="news-card__column2">
+                <h4 class="news-card__title"></h4>
+                <p class="news-card__info"></p>
+              </div>
+            </a>
+          </div>
+          <div class="news-card" id="newsCard5">
+            <a href="" class="news-card__link">
+              <div class="news-card__column1">
+                <img src="" alt="" class="news-card__image" />
+                <p class="news-card__date"></p>
+              </div>
+              <div class="news-card__column2">
+                <h4 class="news-card__title"></h4>
+                <p class="news-card__info"></p>
+              </div>
+            </a>
+          </div>
+          <div class="news-card" id="newsCard6">
+            <a href="" class="news-card__link">
+              <div class="news-card__column1">
+                <img src="" alt="" class="news-card__image" />
+                <p class="news-card__date"></p>
+              </div>
+              <div class="news-card__column2">
+                <h4 class="news-card__title"></h4>
+                <p class="news-card__info"></p>
+              </div>
+            </a>
+          </div>
+          <div class="news-card" id="newsCard7">
+            <a href="" class="news-card__link">
+              <div class="news-card__column1">
+                <img src="" alt="" class="news-card__image" />
+                <p class="news-card__date"></p>
+              </div>
+              <div class="news-card__column2">
+                <h4 class="news-card__title"></h4>
+                <p class="news-card__info"></p>
+              </div>
+            </a>
+          </div>
+          <div class="news-card" id="newsCard8">
+            <a href="" class="news-card__link">
+              <div class="news-card__column1">
+                <img src="" alt="" class="news-card__image" />
+                <p class="news-card__date"></p>
+              </div>
+              <div class="news-card__column2">
+                <h4 class="news-card__title"></h4>
+                <p class="news-card__info"></p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <span class="material-icons news-container__scroll-icon scroll--down">
+          arrow_drop_down
+        </span>
+      </div>
       <div class="navigation-bar">
         <span class="material-icons navigation-item">
           home
