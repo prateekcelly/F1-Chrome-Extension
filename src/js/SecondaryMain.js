@@ -76,20 +76,34 @@ function getFixtures() {
         ".fixtures-container__table > table > tbody"
       );
       table.innerHTML += tableContent;
+    })
+    .catch((e) => {
+      let table = document.querySelector(
+        ".fixtures-container__table > table > tbody"
+      );
+      table.innerHTML += `<tr>
+      <td>${"Error in"}</td>
+      <td>${"fetching results"}</td>
+      <td>${"Please refresh"}</td>
+      <td>${"the page"}</td>
+    </tr>`;
     });
 }
 
 fetchF1News().then((newsArray) => getNewsfeed(newsArray));
 getFixtures();
 
-const newsCards = document.querySelector(".news-container__cards");
-newsCards.addEventListener(
-  "wheel",
-  function (e) {
-    console.log("Hello");
+function scrollNewsFeedOnClick(scrollValue) {
+  const newsFeed = document.querySelector(".news-container__cards");
+  newsFeed.scrollTop -= scrollValue;
+}
 
-    e.returnValue = true;
-    // e.preventDefault();
-  },
-  { passive: false }
+const scrollUpIcon = document.querySelector(
+  ".news-container__scroll-icon.scroll--up"
 );
+const scrollDownIcon = document.querySelector(
+  ".news-container__scroll-icon.scroll--down"
+);
+
+scrollUpIcon.addEventListener("click", () => scrollNewsFeedOnClick(100));
+scrollDownIcon.addEventListener("click", () => scrollNewsFeedOnClick(-100));

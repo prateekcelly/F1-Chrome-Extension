@@ -17,6 +17,7 @@
   font-size: 2em;
   cursor: pointer;
   width: fit-content;
+  user-select: none;
 }
 
 .news-container__cards {
@@ -26,6 +27,7 @@
   width: 500px;
   overflow: auto;
   animation: fadein 2s 0s;
+  scroll-behavior: smooth;
 }
 
 .news-card {
