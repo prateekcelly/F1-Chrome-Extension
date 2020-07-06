@@ -50,7 +50,7 @@ function getNewsfeed(newsArray) {
 function getFixtures() {
   const year = new Date().getFullYear();
   const fixturesURL = "http://ergast.com/api/f1/" + year + ".json";
-
+  let nextRace = "";
   fetch(fixturesURL)
     .then((response) => response.json())
     .then((response) => {
@@ -62,7 +62,12 @@ function getFixtures() {
           const circuit = race.Circuit.circuitName;
           const date = race.date;
 
-          const row = `<tr>
+          const formatedDate = new Date(date);
+          const today = new Date();
+
+          if (nextRace === "" && formatedDate >= today) nextRace = race.round;
+
+          const row = `<tr class=${nextRace === race.round ? "activeRow" : ""}>
           <td>${round}</td>
           <td>${raceName}</td>
           <td>${circuit}</td>
