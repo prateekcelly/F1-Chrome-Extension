@@ -33,7 +33,7 @@
     "babel-loader": "^8.1.0",
     "cheerio": "^1.0.0-rc.3",
     "css-loader": "^3.6.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0"
   }
